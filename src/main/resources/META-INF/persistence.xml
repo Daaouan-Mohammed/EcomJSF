@@ -9,7 +9,7 @@
         <class>com.example.ecomjsf.entities.user</class>
         <class>com.example.ecomjsf.entities.produit</class>
         <properties>
-            <property name="jboss.as.jpa.managed" value="false" />
+            <property name="jboss.as.jpa.managed" value="true" />
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/atelier2"/>
             <property name="jakarta.persistence.jdbc.user" value="root"/>
             <property name="jakarta.persistence.jdbc.password" value=""/>

@@ -16,14 +16,9 @@ public class panier {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_panier;
 
     @ManyToMany
-    @JoinTable(
-            name = "panier_produit",
-            joinColumns = @JoinColumn(name = "panier_id"),
-            inverseJoinColumns = @JoinColumn(name = "produit_id")
-    )
     private List<produit> produits;
 
     @OneToMany

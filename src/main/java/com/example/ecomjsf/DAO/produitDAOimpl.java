@@ -31,14 +31,18 @@ import java.util.List;
         @Override
         public void update(produit produit) {
             em.getTransaction().begin();
-            em.merge(produit);
+            if (!em.contains(produit)) {
+                em.merge(produit);
+            }
             em.getTransaction().commit();
         }
 
         @Override
         public void delete(produit produit) {
             em.getTransaction().begin();
-            produit = em.merge(produit);
+            if (!em.contains(produit)) {
+                produit = em.merge(produit);
+            }
             em.remove(produit);
             em.getTransaction().commit();
         }
